@@ -1,0 +1,6 @@
+<ul>
+    {% for car in car_model_list %}
+       <li> <a href="{% url 'car_tables:detail' car.id %}" > {{ car.car_model }} </a> </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'car_tables:new_model' %}"><button>Add New Model</button></a>

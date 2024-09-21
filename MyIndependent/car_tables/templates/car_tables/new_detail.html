@@ -1,0 +1,7 @@
+<form action="{% url 'car_tables:add_new_detail' %}" method="post">{% csrf_token%}
+    <label for="new_number"> Car Number: </label>
+    <input type="text" name="new_number" id="new_number"><br><br>
+    <label for="new_region"> Region of Registration: </label>
+    <input type="number" name="new_region" id="new_region"><br><br>
+    <button type="submit">Add Details</button>
+</form>

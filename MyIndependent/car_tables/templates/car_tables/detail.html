@@ -1,0 +1,5 @@
+<ul>
+    {% for detail in carmodel.cardetail_set.all %}
+        <li> {{ detail.car_number }} | {{ detail.region }} </li>
+    {% endfor %}
+</ul>
