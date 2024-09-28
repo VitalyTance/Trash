@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{car.car_model}} Detail</title>
+</head>
+<body>
+    <ul>
+        {% for detail in car.detail_set.all %}
+             <li>
+                 <a href="{% url 'car_reg:reg_detail_page' detail.id %}"> {{detail.reg_number}} </a>
+             </li>
+             <li> {{detail.reg_region}} </li>
+             {% if detail.re_sell %}
+              <li> Used </li>
+             {%else%}
+              <li> New </li>
+             {% endif %}
+        {% endfor %}
+    </ul>
+    <a href="{% url 'car_reg:car_list' %}">
+        <input type="button" value="Return to Car List">
+    </a>
+
+</body>
+</html>

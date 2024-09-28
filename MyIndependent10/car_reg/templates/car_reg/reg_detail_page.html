@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{detail.reg_number}} Registration Detail</title>
+</head>
+<body>
+    <ul>
+        {% for reg_detail in detail.regdetail_set.all %}
+             <li>
+                 {{ reg_detail.reg_time }}
+             </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'car_reg:detail_page' detail.car_id %}">
+        <input type="button" value="Return to Car Detail">
+    </a>
+
+</body>
+</html>

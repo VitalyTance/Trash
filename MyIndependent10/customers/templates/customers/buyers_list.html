@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buyers List</title>
+</head>
+<body>
+     <ul>
+         {% for buyer in buyers_list %}
+         <li>
+             {{buyer.name}}
+         </li>
+         {% endfor %}
+     </ul>
+
+</body>
+</html>

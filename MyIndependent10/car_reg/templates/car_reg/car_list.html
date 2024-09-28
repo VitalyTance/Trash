@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car List</title>
+</head>
+<body>
+    <ul>
+        {% for car in car_list %}
+            <li>
+                <a href="{% url 'car_reg:detail_page' car.id %}"> {{ car.car_model }} </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'car_reg:index' %}">  <input type="button" value="Return to Homepage">  </a>
+
+</body>
+</html>
